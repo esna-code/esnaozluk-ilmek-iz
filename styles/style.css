@@ -218,7 +218,7 @@ body {
 
     /* JS tıklandığında menüyü açar */
     .nav-links.active {
-        display: flex !important; /* !important ekleyerek 'kesinlikle göster' diyoruz */
+        display: flex ; /* !important ekleyerek 'kesinlikle göster' diyoruz */
     }
 
     .hero-wrapper {

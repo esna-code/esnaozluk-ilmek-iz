@@ -1,0 +1,190 @@
+/* 1. RENK TANIMLARI */
+:root {
+    --ana-renk: #2c3e50;
+    --turkuaz: #00cfd5;
+    --vurgu: #f39c12;
+    --beyaz-transparan: rgba(255, 255, 255, 0.85);
+}
+
+/* 2. GENEL AYARLAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*sayfa kaymasın diye*/
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-image: url("../img/3.png");
+    background-size: cover;/*resim her yeri kaplasın*/
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* 3. NAVBAR */
+/* dış çerçeve */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+/* iç hizalama */
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /*Logoyu al en sola yasla, linkleri al en sağa yasla, arayı da boş bırak*/
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 130px;
+}
+
+
+/*Standart Flex Navbar */
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Öğeleri yan yana dizer */
+  justify-content: flex-end; /* Menüyü sağa yaslamak için (W3Schools'ta center veya flex-end kullanılır) */
+}
+
+.nav-links li a {
+  display: block; /* Tıklanabilir alanı büyütür */
+  color: var(--ana-renk);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  background-color: #f1f1f1; /* Üzerine gelince hafif renk değişimi */
+  color: var(--turkuaz);
+}
+
+/* 4. HERO ALANI */
+.hero {
+    padding: 60px 20px;
+}
+
+.hero-wrapper {  /*iç kutum*/
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--beyaz-transparan);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-decoration {
+    flex: 1;
+    border: 5px solid var(--turkuaz);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    display: block;
+}
+
+/* 5. HİZMETLER VE BUTONLARIN ORTALANMASI */
+.services {
+    padding: 50px 20px;
+    display: flex; /* Flexbox ile dikey hizalama başlattık */
+    flex-direction: column;
+    align-items: center; /* Her şeyi yatayda ortalar */
+}
+
+    .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center; /* Kartları ortalar */
+    gap: 30px;
+    flex-wrap: wrap; /*responsive uyumlu olması için*/
+    width: 100%;
+    max-width: 1000px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    border-bottom: 5px solid var(--turkuaz);
+}
+
+.icon-placeholder img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* 6. BUTONLARIN TAM ORTALANMASI (CTA) */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Buton kutularını ortalar */
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.btn-cta, .btn-teklif-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Yazıyı butonun içinde ortalar */
+    min-width: 280px;
+    height: 60px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-cta { background: var(--vurgu); }
+.btn-teklif-cta { background: var(--turkuaz); }
+
+.btn-cta:hover, .btn-teklif-cta:hover { /*fare butona gelince tıklama büyüme efekti*/
+    transform: scale(1.05);
+}
+
+.main-footer {
+    margin-top: 50px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
